@@ -1,0 +1,48 @@
+.star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; // Place it behind all content
+  pointer-events: none; // Prevent it from capturing mouse clicks
+  overflow: hidden;
+}
+
+.pointed-star {
+  position: absolute;
+  /* Soft blue or white color for stars */
+  background: linear-gradient(135deg, #e6edf3, #58a6ff);
+  
+  /* 4-point star shape using clip-path */
+  clip-path: polygon(
+    50% 0%, 
+    55% 45%, 
+    100% 50%, 
+    55% 55%, 
+    50% 100%, 
+    45% 55%, 
+    0% 50%, 
+    45% 45%
+  );
+  
+  /* Twinkle animation */
+  animation: twinkle linear infinite;
+  opacity: var(--base-opacity);
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(0.6) rotate(0deg);
+    opacity: calc(var(--base-opacity) * 0.4);
+  }
+  50% {
+    transform: scale(1.2) rotate(45deg); /* Slight rotation to add life */
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(88, 166, 255, 0.8));
+  }
+  100% {
+    transform: scale(0.6) rotate(90deg);
+    opacity: calc(var(--base-opacity) * 0.4);
+  }
+}

@@ -1,0 +1,85 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px !important;
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .greeting {
+    font-size: 1.25rem;
+    color: #58a6ff;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .name {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #e6edf3;
+    margin-bottom: 0.5rem;
+  }
+
+  .role {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #8b949e;
+    margin-bottom: 2rem;
+  }
+
+  .objective {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #8b949e;
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.5rem;
+
+    .btn {
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #58a6ff;
+      color: #0d1117;
+      border: 1px solid #58a6ff;
+
+      &:hover {
+        background: #3182ce;
+        border-color: #3182ce;
+      }
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #e6edf3;
+      border: 1px solid #30363d;
+
+      &:hover {
+        border-color: #8b949e;
+        background: rgba(48, 54, 61, 0.4);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    .name { font-size: 2.5rem; }
+    .role { font-size: 2rem; }
+    .hero-actions { flex-direction: column; }
+  }
+}

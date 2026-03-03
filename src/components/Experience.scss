@@ -1,0 +1,87 @@
+.experience-section {
+  .experience-card {
+    background: rgba(33, 38, 45, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(88, 166, 255, 0.3);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #e6edf3;
+        font-weight: 600;
+      }
+
+      .duration {
+        font-size: 0.95rem;
+        color: #8b949e;
+        background: rgba(139, 148, 158, 0.1);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+      }
+    }
+
+    .role-title {
+      font-size: 1.15rem;
+      color: #58a6ff;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+
+    .tech-stack {
+      font-size: 0.9rem;
+      color: #8b949e;
+      margin-bottom: 1.5rem;
+      font-family: monospace;
+    }
+
+    .achievements-list {
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.8rem;
+        color: #c9d1d9;
+        line-height: 1.6;
+        font-size: 0.95rem;
+
+        &::before {
+          content: '▹';
+          position: absolute;
+          left: 0;
+          color: #58a6ff;
+          font-size: 1.1rem;
+        }
+
+        strong {
+          color: #e6edf3;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section .experience-card {
+    padding: 1.5rem;
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  h3 {
+    font-size: 1.25rem;
+    color: #e6edf3;
+    margin-bottom: 1.25rem;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: #58a6ff;
+      border-radius: 2px;
+    }
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+    .skill-pill {
+      background: rgba(33, 38, 45, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #c9d1d9;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: #58a6ff;
+        color: #58a6ff;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .side-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .education-card, .achievements-card {
+    background: rgba(33, 38, 45, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .edu-details {
+    h4 {
+      font-size: 1.15rem;
+      color: #e6edf3;
+      margin-bottom: 0.3rem;
+    }
+    .duration {
+      font-size: 0.85rem;
+      color: #8b949e;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    p {
+      color: #c9d1d9;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .grade {
+      color: #58a6ff;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+  }
+
+  .achievement-list {
+    list-style: none;
+    
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #c9d1d9;
+      font-size: 0.95rem;
+      line-height: 1.5;
+
+      &::before {
+        content: '🏆';
+        position: absolute;
+        left: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  input[type="text"] {
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
