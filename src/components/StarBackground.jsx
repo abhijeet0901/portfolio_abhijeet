@@ -6,21 +6,19 @@ const StarBackground = () => {
 
   useEffect(() => {
     const generatedStars = [];
-    const numStars = 60; // Adjust for density
+    const numStars = 40; // Less than original but visible
     
     for (let i = 0; i < numStars; i++) {
       generatedStars.push({
         id: i,
-        // Calculate random positions
         left: Math.random() * 100,
         top: Math.random() * 100,
-        // Map size to 4px - 14px
-        size: Math.random() * 10 + 4,
-        // Randomize animation delays and durations for twinkling
-        animationDuration: Math.random() * 4 + 2,
-        animationDelay: Math.random() * 5,
-        // Opacity varies to add depth
-        baseOpacity: Math.random() * 0.5 + 0.3
+        // Map size to 3px - 8px so they are visible
+        size: Math.random() * 5 + 3,
+        animationDuration: Math.random() * 5 + 3,
+        animationDelay: Math.random() * 10,
+        // Slightly higher opacity for visibility
+        baseOpacity: Math.random() * 0.3 + 0.2
       });
     }
     

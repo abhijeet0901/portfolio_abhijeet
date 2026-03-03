@@ -26,10 +26,34 @@ section {
   }
 }
 
+// Targeting sections from Experience onwards with minimal adjustments
+#experience, #projects, #skills, #contact {
+  padding-top: 32px; // Minimal space to prevent title touching navbar
+  
+  .section-title {
+    margin-bottom: 2rem; // Reduced from 4rem for a tighter look
+  }
+}
+
 .footer {
   text-align: center;
   padding: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #8b949e;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+    
+    .section-title {
+      font-size: 1.8rem; // Smaller title size for mobile
+      margin-bottom: 2rem;
+    }
+  }
+
+  #experience, #projects, #skills, #contact {
+    padding-top: 20px;
+  }
 }

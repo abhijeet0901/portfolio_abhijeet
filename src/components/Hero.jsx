@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import profileImg from '../images/profile.jpg';
 import './Hero.scss';
 
 const Hero = () => {
@@ -11,6 +12,9 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
+        <div className="profile-image-container">
+          <img src={profileImg} alt="Abhijeet Dhar Dubey" className="profile-image" />
+        </div>
         <span className="greeting">Hi, I'm</span>
         <h1 className="name">Abhijeet Dhar Dubey</h1>
         <h2 className="role">UI Developer</h2>
@@ -22,7 +26,7 @@ const Hero = () => {
         </p>
         
         <div className="hero-actions">
-          <a href="#projects" className="btn btn-primary">View My Work</a>
+          <a href="#experience" className="btn btn-primary">View My Work</a>
           <a href="#contact" className="btn btn-secondary">Contact Me</a>
         </div>
       </motion.div>
