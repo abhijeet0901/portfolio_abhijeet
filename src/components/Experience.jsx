@@ -16,7 +16,7 @@ const Experience = () => {
         >
           <div className="card-header">
             <h3>Tata Consultancy Services</h3>
-            <span className="duration">2025 – Present</span>
+            <span className="duration">Jan 2025 – Present</span>
           </div>
           <h4 className="role-title">UI Developer</h4>
           <p className="tech-stack">React.js · Redux · SCSS · JavaScript · TypeScript</p>
