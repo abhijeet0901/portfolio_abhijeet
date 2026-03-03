@@ -58,7 +58,11 @@
 
 @media (max-width: 768px) {
   .nav-content {
-    justify-content: flex-end;
+    justify-content: flex-start !important;
+    padding: 0 1rem;
+    max-width: none;
+    width: 100%;
+    margin: 0;
   }
 
   .navbar .menu-icon {
